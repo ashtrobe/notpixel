@@ -21,12 +21,8 @@ start_text = """
 ██║ ╚████║╚██████╔╝   ██║   ██║     ██║██╔╝ ██╗███████╗███████╗
 ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
 
-🎨️Github - https://github.com/YarmolenkoD/notpixel
-
-My other bots:
-
-💩Boinkers - https://github.com/YarmolenkoD/boinkers
-🚀Moonbix - https://github.com/YarmolenkoD/moonbix [GAME IS NOT WORKING]
+JOIN FOR SCRIPTS AND AIRDROP UPDATES
+ASH'S TRICKS - https://t.me/+I2ePRowcRoVkNjhl
 
 NEW ENV VARIABLE: ENABLE_EXPERIMENTAL_X3_MODE=True (Default = True)
 
