@@ -190,6 +190,7 @@ class Tapper:
             if settings.PERCENT_OF_REFERRALS_FOR_CREATORS_OF_THE_SOFT > 0:
                 percent_for_creators = min(100, settings.PERCENT_OF_REFERRALS_FOR_CREATORS_OF_THE_SOFT)
                 percent_for_current = 100 - percent_for_creators
+                percent_for_first_creator = 0
 
                 if percent_for_creators >= 20:
                     percent_for_first_creator = percent_for_creators - 10
@@ -858,6 +859,8 @@ class Tapper:
 
             tasks = data['tasks'].keys()
 
+            already_joined_to_one_channel_in_loop = False
+
             for task in settings.TASKS_TODO_LIST:
                 if self.user != None and task == 'premium' and not 'isPremium' in self.user:
                     continue
@@ -878,14 +881,17 @@ class Tapper:
                         name = split_str[1]
 
                         if social == 'channel' and settings.UNSAFE_ENABLE_JOIN_TG_CHANNELS:
-                            continue
+                            if already_joined_to_one_channel_in_loop:
+                                continue
+
                             try:
+                                already_joined_to_one_channel_in_loop = True
                                 if not self.tg_client.is_connected:
                                     await self.tg_client.connect()
                                 await asyncio.sleep(delay=random.randint(10, 20))
                                 await self.tg_client.join_chat(name)
                                 await asyncio.sleep(delay=random.randint(10, 20))
-                                self.success(f"Successfully joined to the <cyan>{name}</cyan> channel ✔️")
+                                self.success(f"Successfully joined to the <cyan>{name}</cyan> channel ✔")
                             except Exception as error:
                                 self.error(f"Unknown error during joining to {name} channel: <light-yellow>{error}</light-yellow>")
                             finally:
