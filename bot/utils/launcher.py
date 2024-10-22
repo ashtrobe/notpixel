@@ -21,8 +21,6 @@ start_text = """
 ██║ ╚████║╚██████╔╝   ██║   ██║     ██║██╔╝ ██╗███████╗███████╗
 ╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
 
-🎨️Github - https://github.com/YarmolenkoD/notpixel
-
 NEW ENV VARIABLES TO GET MORE +12 POINTS:
 
 ENABLE_SERVER_MODE=True (Default = True) (WORK ONLY WITH FEW HARDCODED TEMPLATES)
